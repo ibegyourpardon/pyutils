@@ -21,3 +21,17 @@ def get_common_prefix_of_strings(str_list: list) -> str:
     return ''.join(commons)
 
 
+def get_common_suffix_of_strings(str_list: list) -> str:
+    """
+    Return common suffix of the stings
+        >>> common_suffix(['dabc', '1abc'])
+        'abc'
+    """
+    commons = []
+    for i in range(min(len(s) for s in str_list)):
+        common = str_list[0][-i-1]
+        for c in str_list[1:]:
+            if c[-i-1] != common:
+                return ''.join(reversed(commons))
+        commons.append(common)
+    return ''.join(reversed(commons))
