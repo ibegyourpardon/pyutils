@@ -12,5 +12,7 @@ setup(
     url='https://github.com',
     description=u'my pyutils ',
     packages=['pyutils'],
-    install_requires=[],
+    install_requires=[
+        'requests'
+    ],
 )
