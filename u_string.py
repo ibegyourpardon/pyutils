@@ -35,3 +35,11 @@ def get_common_suffix_of_strings(str_list: list) -> str:
                 return ''.join(reversed(commons))
         commons.append(common)
     return ''.join(reversed(commons))
+
+
+def sort(s, reverse=False):
+    """
+    Sort given string by ascending order.
+    If reverse is True, sorting given string by descending order.
+    """
+    return ''.join(sorted(s, reverse=reverse))
